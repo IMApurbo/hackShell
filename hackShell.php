@@ -69,7 +69,7 @@ foreach ($files as $file) {
     </style>
     <script>
         // Typewriter effect for command output
-        function typeWriter(text, elementId, speed = 50) {
+        function typeWriter(text, elementId, speed = 10) {
             let i = 0;
             const element = document.getElementById(elementId);
             element.innerHTML = "";
